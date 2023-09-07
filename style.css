@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    padding-top: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Orbitron', sans-serif;
+    color: #bdfd4d;
+    text-shadow: 0 0 10px #bdfd4d,
+                          0 0 20px #bdfd4d,
+                          0 0 40px #bdfd4d,
+                          0 0 80px #bdfd4d,
+                          0 0 120px #bdfd4d,
+                          0 0 160px #bdfd4d;
+                          
+}
+body{
+    background-color: #22093e;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.clock{
+   width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(clock.png);
+    background-size: cover;
+    border: 4px solid  #2c0253;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+                          inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+                            0 15px 15px rgba(0, 0, 0, 0.3),
+                            inset 0 15px 15px rgba(0, 0, 0, 0.3);
+                            
+}
+.clock::before{
+    content: ' ';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+   
+}
+.clock .hour, .hr{
+    width: 160px;
+    height: 160px;
+
+}
+.clock .min, .mn{
+    width: 190px;
+    height: 190px;
+}
+.clock .sec, .sc{
+    width: 230px;
+    height: 230px;
+}
+.hr, .mn, .sc{
+   display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    border-radius: 50%;
+}
+.hr::before{
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: #bdfd4d;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn::before{
+    content: ' ';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background-color: #b483eb;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.sc::before{
+    content: ' ';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #ae48f3;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+    
